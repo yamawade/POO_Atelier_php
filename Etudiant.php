@@ -66,7 +66,12 @@
             return $this->voiture;
         }
         public function setVoiture($voitureProf){
-            $this->voiture=$voitureProf;
+            if($voitureProf=='oui' || $voitureProf=='non'){
+                $this->voiture=$voitureProf;
+            }else{
+                echo "La valeur de la voiture doit etre oui/non";
+            }
+            
         }
         public function getSalaire(){
             return $this->salaire;
